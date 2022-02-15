@@ -1,0 +1,19 @@
+app/
+    components/
+        header
+    pages/
+        home
+        works
+        censor
+        userslist
+        tasklist
+    shared/
+        styles/
+            _base.scss
+            _fonts.scss
+            _variables.scss
+            _mixins.scss
+        pipes/
+assets/
+    fonts/
+    images/
