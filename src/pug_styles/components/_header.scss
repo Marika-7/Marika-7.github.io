@@ -1,0 +1,49 @@
+// ---------- header ----------
+.header {
+  height: 90px;
+  background-color: $bg_header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-family: 'Caveat';
+    color: $red;
+    font-weight: bold;
+    font-size: 2.6rem;
+    text-align: center;
+    &__name {
+      margin-left: 1rem;
+      font-family: 'NothingYouCouldDo';
+      font-size: 2.8rem;
+    }
+  }
+}
+
+// ---------- nav ----------
+.nav {
+  display: flex;
+  justify-content: center;
+  column-gap: 3px;
+  &__link {
+    display: inline-block;
+    padding: 1rem;
+    border: 1.5px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-family: 'NothingYouCouldDo';
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .5s;
+    &:hover {
+      border-right-color: $light;
+      border-bottom-color: $light;
+      border-left-color: $light;
+    }
+    @include screen-480 {
+      font-size: .8rem;
+    }
+  }
+}

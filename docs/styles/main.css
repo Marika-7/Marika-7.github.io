@@ -1,0 +1,304 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "NothingYouCouldDo";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/NothingYouCouldDo-Regular.woff2");
+}
+@font-face {
+  font-family: "Caveat";
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/Caveat-Bold.woff2");
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2");
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff2");
+}
+html:not(.touch-screen)::-webkit-scrollbar,
+html:not(.touch-screen) *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-track,
+html:not(.touch-screen) *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-thumb,
+html:not(.touch-screen) *::-webkit-scrollbar-thumb {
+  background: #8195cf;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #222755;
+  font-family: "OpenSans", sans-serif;
+  color: #8195cf;
+}
+
+.main {
+  min-height: calc(100vh - 195px);
+  padding: 40px 3rem 2rem;
+}
+@media screen and (max-width: 640px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.cards {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+@media screen and (max-width: 1280px) {
+  .cards {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  justify-self: center;
+  width: 300px;
+  border-radius: 6px;
+}
+@media screen and (max-width: 1280px) {
+  .card {
+    width: 240px;
+  }
+}
+.card__link {
+  display: inline-block;
+  width: 100%;
+  height: 201px;
+  border: 1.5px solid #8195cf;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.card__link:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1280px) {
+  .card__link {
+    height: 161px;
+  }
+}
+.card__img {
+  width: 100%;
+}
+.card__title {
+  margin-bottom: 15px;
+  font-family: "NothingYouCouldDo";
+  text-align: center;
+}
+
+.about {
+  font-family: "NothingYouCouldDo";
+  font-size: 24px;
+}
+.about__block {
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .about__block {
+    font-size: 20px;
+  }
+}
+
+.skills {
+  padding: 15px 30px 25px;
+  border: 1.5px solid #8195cf;
+  border-radius: 6px;
+  width: 420px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .skills {
+    width: 360px;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills {
+    width: 100%;
+  }
+}
+.skills__h2 {
+  margin-bottom: 20px;
+  font-family: "Caveat";
+  font-size: 48px;
+  text-align: center;
+  text-decoration: underline;
+}
+@media screen and (max-width: 640px) {
+  .skills__h2 {
+    font-size: 32px;
+  }
+}
+.skills__block {
+  display: flex;
+  gap: 60px;
+}
+@media screen and (max-width: 640px) {
+  .skills__block {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills__block {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.skills__ul {
+  padding-left: 25px;
+  list-style-type: " -  ";
+}
+@media screen and (max-width: 480px) {
+  .skills__ul {
+    width: 220px;
+  }
+}
+.skills__li {
+  line-height: 150%;
+}
+
+.header {
+  height: 90px;
+  background-color: #111863;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .title {
+  font-family: "Caveat";
+  color: #fc4692;
+  font-weight: bold;
+  font-size: 2.6rem;
+  text-align: center;
+}
+.header .title__name {
+  margin-left: 1rem;
+  font-family: "NothingYouCouldDo";
+  font-size: 2.8rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.nav__link {
+  display: inline-block;
+  padding: 1rem;
+  border: 1.5px solid transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-family: "NothingYouCouldDo";
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: all 0.5s;
+}
+.nav__link:hover {
+  border-right-color: #8195cf;
+  border-bottom-color: #8195cf;
+  border-left-color: #8195cf;
+}
+@media screen and (max-width: 480px) {
+  .nav__link {
+    font-size: 0.8rem;
+  }
+}
+
+.footer {
+  height: 50px;
+  padding: 0 15vw;
+  background-color: #111863;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer .contact {
+  height: 24px;
+  display: flex;
+  gap: 1rem;
+}
+.footer .contact__svg {
+  width: 24px;
+  height: 24px;
+  fill: #6563ff;
+}
+.footer .contact__svg:hover {
+  fill: rgba(173, 171, 252, 0.9019607843);
+}

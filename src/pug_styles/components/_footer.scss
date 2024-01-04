@@ -1,0 +1,23 @@
+// ---------- footer ----------
+.footer {
+  height: 50px;
+  padding: 0 15vw;
+  background-color: $bg_header;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .contact {
+    height: 24px;
+    display: flex;
+    gap: 1rem;
+    // &__link {}
+    &__svg {
+      width: 24px;
+      height: 24px;
+      fill: $icon;
+      &:hover {
+        fill: $icon-hover;
+      }
+    }
+}
+}

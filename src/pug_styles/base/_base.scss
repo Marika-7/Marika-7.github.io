@@ -1,0 +1,154 @@
+// ---------- scrollbar -----------
+
+html:not(.touch-screen)::-webkit-scrollbar,
+html:not(.touch-screen) *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-track,
+html:not(.touch-screen) *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html:not(.touch-screen)::-webkit-scrollbar-thumb,
+html:not(.touch-screen) *::-webkit-scrollbar-thumb {
+  background: $light;
+	border-radius: 5px; 
+}
+
+// ---------- body -----------
+body {
+	background-color: $bg_main;
+	font-family: 'OpenSans', sans-serif;
+	color: $light;
+}
+
+.main {
+	min-height: calc(100vh - (90px + 55px + 50px));
+	padding: 40px 3rem 2rem;
+	@include screen-640 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.section {
+	margin-bottom: 40px;
+}
+
+// ---------- home -----------
+.cards {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto ;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 60px;
+	@include screen-1280 {
+		gap: 40px;
+	}
+	@include screen-1024 {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	@include screen-640 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.card {
+	justify-self: center;
+	width: 300px;
+	border-radius: 6px;
+	@include screen-1280 {
+		width: 240px;
+	}
+	&__link {
+		display: inline-block;
+		width: 100%;
+		height: 201px;
+		border: 1.5px solid $light;
+		border-radius: 6px;
+		overflow: hidden;
+		transition: all .5s;
+		&:hover {
+			transform: scale(1.1);
+		}
+		@include screen-1280 {
+			height: 161px;
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+	&__title {
+		margin-bottom: 15px;
+		font-family: 'NothingYouCouldDo';
+		text-align: center;
+	}
+	// &__descripion {}
+}
+
+// ---------- about -----------
+.about {
+	font-family: 'NothingYouCouldDo';
+	font-size: 24px;
+	&__block {
+	max-width: 800px;
+	margin: 0 auto;
+	@include screen-640 {
+		font-size: 20px;
+	}
+	}
+}
+
+.skills {
+	padding: 15px 30px 25px;
+	border: 1.5px solid $light;
+	border-radius: 6px;
+	width: 420px;
+	margin: 0 auto;
+	@include screen-640 {
+		width: 360px;
+		padding: 15px;
+	}
+	@include screen-480 {
+		width: 100%;
+	}
+	&__h2 {
+		margin-bottom: 20px;
+		font-family: 'Caveat';
+		font-size: 48px;
+		text-align: center;
+		text-decoration: underline;
+		@include screen-640 {
+			font-size: 32px;
+		}
+	}
+	&__block {
+		display: flex;
+		gap: 60px;
+		@include screen-640 {
+			gap: 30px;
+		}
+		@include screen-480 {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__ul {
+		padding-left: 25px;
+		list-style-type: ' -  ';
+		@include screen-480 {
+			width: 220px;
+		}
+	}
+	&__li {
+		line-height: 150%;
+	}
+}
